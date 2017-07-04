@@ -105,7 +105,6 @@ def make_outcell_from_triangle(in_vals, element_type,
         ds_out.InsertNextCell(vtk.VTK_TRIANGLE, 3, ptlist)
 
     elif element_type == "CG2" or element_type == "DG2":
-
         # Represent CG2/DG2 on a quadratic mesh
         ptlist = [None, None, None, None, None, None]
         scnt = ds_out.GetPoints().GetNumberOfPoints()
@@ -132,7 +131,6 @@ def make_outcell_from_triangle(in_vals, element_type,
 
             ptlist[ix] = scnt
             scnt = scnt+1
-
         ds_out.InsertNextCell(vtk.VTK_QUADRATIC_TRIANGLE, 6, ptlist)
 
     elif element_type[:2] == "CG":
@@ -228,6 +226,7 @@ def traverse(ds_in, ds_out):
     assert in_idx_name.split("_")[-2] == "cell"
     element_type = in_idx_name.split("_")[-3]
     assert in_vals_name.split("_")[-1] == "vector"
+
     assert in_vals_name.split("_")[-2] == element_type
 
     print "Element Type = ", element_type
@@ -253,6 +252,7 @@ def traverse(ds_in, ds_out):
         ds_out.Allocate(ds_in.GetNumberOfCells())
         ds_out.SetPoints(vtk.vtkPoints())
         ds_out.GetPointData().AddArray(out_vals)
+
 
     # Iterate over each cell
     for x in range(ds_in.GetNumberOfCells()):
