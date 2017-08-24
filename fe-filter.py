@@ -92,6 +92,7 @@ def make_outcell_from_triangle(in_vals, element_type,
         scnt = ds_out.GetPoints().GetNumberOfPoints()
         for ix in range(0, 3):
             coord = cells_points.GetPoint(ix)
+            print("Adding point {}".format(coord))
             ds_out.GetPoints().InsertNextPoint(coord)
 
             # Scalar (one value), Vector (two or three values)
@@ -256,6 +257,7 @@ def traverse(ds_in, ds_out):
 
     # Iterate over each cell
     for x in range(ds_in.GetNumberOfCells()):
+        print("I am on cell: ", x)
         in_cell = ds_in.GetCell(x)
         # Indices to quantities for this cell
         value_indices = [int(i) for i in index_array.GetTuple(x)]

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="f">
+      <Grid Name="f_0" GridType="Uniform">
+        <Topology NumberOfElements="24" TopologyType="Triangle_6" NodesPerElement="6">
+          <DataItem Dimensions="24 6" NumberType="UInt" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="61 2" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="f" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="144 1" NumberType="UInt" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/cell_dofs</DataItem>
+          <DataItem Dimensions="61 1" NumberType="Float" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/vector</DataItem>
+          <DataItem Dimensions="25 1" NumberType="UInt" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="24 1" NumberType="UInt" Format="HDF">scalar_CG2_2D_quad_triangle.h5:f/f_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

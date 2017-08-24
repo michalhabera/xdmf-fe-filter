@@ -11,10 +11,10 @@
         </Geometry>
         <Time Value="0.000000" />
         <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="f" Center="Other" AttributeType="Scalar">
-          <DataItem Name="cell_dofs" Dimensions="600 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/cell_dofs</DataItem>
-          <DataItem Name="vector" Dimensions="121 1" NumberType="Float" Format="HDF">scalar_CG1_2D.h5:f/f_0/vector</DataItem>
-          <DataItem Name="x_cell_dofs" Dimensions="201 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/x_cell_dofs</DataItem>
-          <DataItem Name="cells" Dimensions="200 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/cells</DataItem>
+          <DataItem Dimensions="600 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/cell_dofs</DataItem>
+          <DataItem Dimensions="121 1" NumberType="Float" Format="HDF">scalar_CG1_2D.h5:f/f_0/vector</DataItem>
+          <DataItem Dimensions="201 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="200 1" NumberType="UInt" Format="HDF">scalar_CG1_2D.h5:f/f_0/cells</DataItem>
         </Attribute>
       </Grid>
     </Grid>
